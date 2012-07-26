@@ -458,7 +458,7 @@ static int adev_open_output_stream(struct audio_hw_device *dev,
 #endif
 
 #ifdef USES_AUDIO_LEGACY
-    *channels = *channels >> 2;
+    *channels = out_get_channels(*out);
 #endif
 
     if (!out->legacy_out) {
